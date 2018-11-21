@@ -1,2 +1,0 @@
-# labyrinth
-cara al sol
