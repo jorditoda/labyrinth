@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour {
 
     public Transform target;
     public Transform myTransform;
+    public int numHits;
 
     private int maxDist = 1;
 
@@ -16,7 +17,9 @@ public class Skeleton : MonoBehaviour {
             transform.position += transform.forward * 2 * Time.deltaTime;
 
             if (Vector3.Distance(transform.position, target.position) <= maxDist) {
-                Destroy(this.gameObject);
+                HealthBar.health -= 10f;
+                numHits++;
+                if (numHits == 3) Destroy(this.gameObject);
             }
         }
 	}
