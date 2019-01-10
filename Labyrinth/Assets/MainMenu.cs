@@ -7,16 +7,20 @@ public class MainMenu : MonoBehaviour {
 
 	public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SampleScene");
 
     }
 
+    public void LoadMenu() 
+    {
+        SceneManager.LoadScene("Menu");
+
+    }
 
     public void QuitGame()
     {
-     
-        Application.Quit();
-
+        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit();
     }
 		
 	
